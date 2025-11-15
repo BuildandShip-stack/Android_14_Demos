@@ -1,0 +1,19 @@
+// Build a persistent platform app
+android_app {
+    name: "simple-service",
+    srcs: ["src/**/*.java"],
+
+    // Install into /system_ext/app
+    system_ext_specific: true,
+
+    // Sign with platform keys
+    certificate: "platform",
+
+    // Link with simplemanager platform library 
+    platform_apis: true,
+    libs: ["com.example.simplemanager"],
+
+    // Allow the app to use simplemanager as a platform library
+    // (necessary for libraries that are not built as java_library_sdk
+    uses_libs: ["com.example.simplemanager"],
+}

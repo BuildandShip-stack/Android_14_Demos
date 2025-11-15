@@ -1,0 +1,19 @@
+// Build an app that calls simple-manager platform library
+android_app {
+    name: "simple-manager-app",
+    srcs: ["src/**/*.java"],
+    resource_dirs: ["res"],
+
+    // Install in /system_ext/app
+    system_ext_specific: true,
+    libs: ["com.example.simplemanager"],
+    uses_libs: ["com.example.simplemanager"],
+
+    // We need to set "platform_apis: true" and remove sdk_version: current,
+    // otherwise we get this error message:
+    // module "simple-manager-app" variant "android_common": compiles against Android API,
+    // but dependency "com.example.simplemanager" is compiling against non-public Android API.
+    // Adjust sdk_version: property of the source or target module so that target module is
+    // built with the same or smaller API set than the source
+    platform_apis: true,
+}

@@ -1,0 +1,23 @@
+// Build the library
+java_library {
+    name: "com.example.simplemanager",
+    srcs: ["src/**/*.java",
+           "src/**/*.aidl",],
+
+    // Install the library into /system_ext/framwork
+    system_ext_specific: true,
+
+    //  produce a `.jar` file containing classes.dex files suitable for installing on a device
+    installable: true,
+
+    // Dependency on the permission file below
+    required: ["com.example.simplemanager.xml"],
+}
+
+// Copy com.example.simple-manager.xml to /system_ext/etc/permissions/
+prebuilt_etc {
+    name: "com.example.simplemanager.xml",
+    src: "com.example.simplemanager.xml",
+    sub_dir: "permissions",
+    system_ext_specific: true,
+}

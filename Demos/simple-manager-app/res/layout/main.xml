@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+                android:layout_marginTop="40sp"
+            >
+         <Button
+            android:id="@+id/button1"
+	    android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addints"
+            android:onClick="onButtonAddints" />
+        <EditText
+             android:id="@+id/integer1"
+             android:layout_height="wrap_content"
+             android:layout_width="60dip"
+             android:inputType="numberSigned"
+             android:maxLength="4" />
+        <EditText
+             android:id="@+id/integer2"
+             android:layout_height="wrap_content"
+             android:layout_width="60dip"
+             android:inputType="numberSigned"
+             android:maxLength="4" />
+        </LinearLayout>
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+                android:layout_marginTop="40sp"
+            >
+         <Button
+            android:id="@+id/button2"
+	    android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/echostring"
+            android:onClick="onButtonEchostring" />
+        <EditText
+             android:id="@+id/string1"
+             android:layout_height="wrap_content"
+             android:layout_width="fill_parent"
+	     android:inputType="text" />
+        </LinearLayout>
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+       android:id="@+id/button3"
+       android:textAllCaps="false"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/button3"
+       android:onClick="onButton3" />
+    <TextView
+        android:id="@+id/textview3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+

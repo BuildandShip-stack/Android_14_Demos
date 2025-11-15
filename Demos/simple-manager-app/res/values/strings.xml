@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SimpleManagerActivity</string>
+    <string name="addints">Add ints</string>
+    <string name="echostring">Echo string</string>
+    <string name="button3">Button 3</string>
+</resources>
